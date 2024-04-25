@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            Input One
+        </h2>
+
+        <lightning-input type="text" name="inputVal1" label="Enter some text" onchange={getInputVal1}></lightning-input>
+
+        <br/>
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            Input Two
+        </h2>
+
+        <lightning-input type="text" name="inputVal2" label="Enter some text" onchange={getInputVal2}></lightning-input>
+
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <lightning-button variant="brand" label="Add" title="Looks like a link" onclick={addNumbers} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Sub" title="Looks like a link" onclick={subNumbers} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Mul" title="Looks like a link" onclick={mulNumbers} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Div" title="Looks like a link" onclick={divNumbers} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Clear" title="Looks like a link" onclick={clearNumbers} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+        <!-- <lightning-button variant="brand" label="Answer" title="Looks like a link" onclick={setAnswerVal} class="slds-m-left_x-small"></lightning-button> -->
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+           Answer: {answerVal}
+        </h2> 
+    </div>
+    
+</template>

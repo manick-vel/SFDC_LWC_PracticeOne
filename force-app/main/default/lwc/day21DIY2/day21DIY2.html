@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Update Record">
+        <lightning-input type="text" name="Record Id" label="Record Id" onchange={getRecordId}></lightning-input><br/>
+
+        <lightning-input type="text" name="Name" label="Name" onchange={changeHandler}></lightning-input><br/>
+        <lightning-input type="text" name="Industry" label="Industry" onchange={changeHandler}></lightning-input><br/>
+        <lightning-input type="text" name="AnnualRevenue" label="Annual Revenue" onchange={changeHandler}></lightning-input><br/>
+
+        <lightning-button variant="brand" label="Save" onclick={submitHandler}></lightning-button>
+        <lightning-button variant="brand" label="Clear" onclick={clearHandler}></lightning-button>
+    </lightning-card>
+</template>

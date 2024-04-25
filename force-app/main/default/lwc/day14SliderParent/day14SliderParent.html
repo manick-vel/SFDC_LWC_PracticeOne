@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title ="Volume Control">
+        <div slot="actions">
+            <lightning-button variant="brand" label="Reset" onclick={resetSlider}></lightning-button>
+        </div>
+         
+        <lightning-input type="text" label="Enter the slider val" onchange={changeSlider}></lightning-input>
+
+        <c-day14-slider-child slider-value = {sliderValue}></c-day14-slider-child>
+    </lightning-card>
+    
+</template>               
+
+
+
+
+
+

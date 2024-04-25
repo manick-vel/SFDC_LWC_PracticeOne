@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Field Information">
+        <template if:true={recordData}>
+            Total number of field used: {totalFieldsCount} <br/>
+            Number of Custom fields: {customFieldsCount} <br/>
+            Number of Picklist fields: {picklistFieldsCount} <br/>
+            Number of Record Types: {recordTypesCount}<br/>
+        </template>
+    </lightning-card>
+</template>

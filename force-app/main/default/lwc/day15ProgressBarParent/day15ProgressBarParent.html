@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Action Progress">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Start" onclick={startProgress}></lightning-button>
+            <c-day15-progress-bar-child onprogressfinished={finishStart}></c-day15-progress-bar-child>
+        </div>
+        
+    </lightning-card>
+    
+</template>

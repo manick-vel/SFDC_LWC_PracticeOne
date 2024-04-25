@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title = "To do list">
+        <!-- <div class="c-container">
+            <lightning:layout>
+                <lightning:layoutItem flexibility="auto" padding="around-small">
+                    1
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small">
+                    2
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small">
+                    3
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small">
+                    4
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div> -->
+        <div>
+            <template for:each={tasksList} for:item="tasks">
+                <div key={tasks}>
+                    {tasks.taskName}
+                    &nbsp; 
+                    <lightning-button variant="base" label="Delete" onclick={deleteTask} data-taskid={tasks.Id}></lightning-button>
+                </div>
+            </template>
+        </div>
+
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <lightning-input type="text" name="enterTask" onchange={setTask}></lightning-input>
+
+            <br/>
+            <lightning-button variant="brand" label="Add Task" onclick={addTask} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title = "Convert to Capital">
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <lightning-input type="text" name="inputUpper" onchange={convertUpperCase}></lightning-input>
+
+            <br/>
+            <p class="slds-text-heading_small slds-m-bottom_small">
+                UpperCase: {answerUpper}
+            </p>
+        </div>
+    </lightning-card>
+
+    <lightning-card title = "Product">
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            Enter Stock:
+            <lightning-input type="text" name="enterStock" onchange={displayProductOnStock}></lightning-input>
+
+            <br/>
+            
+            <template if:true = {isShowStock}>
+                Stock details:<br/>
+
+                {product.name}<br/>
+                {product.price}<br/>
+                {product.stock}<br/>
+            </template>
+
+            <template if:false = {isShowStock}>
+                No stock available
+            </template>
+                
+        </div>
+    </lightning-card>
+
+    <lightning-card title = "Employees">
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            Enter Salary:
+            <lightning-input type="text" name="enterSalary" onchange={displayEmployeeOnSalary}></lightning-input>
+
+            <br/>
+            
+            Employee details:
+            <template for:each={employees} for:item="employee">
+                <div key={employee.name} class="slds-border_top">
+                    {employee.name}<br/>
+                    {employee.salary}<br/>
+                    {employee.position}<br/>
+                </div>
+            </template>
+                
+        </div>
+    </lightning-card>
+</template>
